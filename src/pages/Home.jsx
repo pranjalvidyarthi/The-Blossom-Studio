@@ -1,4 +1,8 @@
 import { useEffect } from "react";
+import birthdayImg from "../assets/occasions/birthday.jpg";
+import weddingImg from "../assets/occasions/wedding.jpg";
+import anniversaryImg from "../assets/occasions/anniversary.jpg";
+import partyImg from "../assets/occasions/party.jpg";
 
 const Home = () => {
   useEffect(() => {}, []);
@@ -9,25 +13,25 @@ const occasions = [
     icon: "🎉",
     title: "Birthday",
     text: "Make your birthday unforgettable",
-    image: "/src/assets/occasions/birthday.jpg",
+    image: birthdayImg,
   },
   {
     icon: "💍",
     title: "Wedding",
     text: "A wedding to remember",
-    image: "/src/assets/occasions/wedding.jpg",
+    image: weddingImg,
   },
   {
     icon: "🥂",
     title: "Anniversary",
     text: "Celebrate your love",
-    image: "/src/assets/occasions/anniversary.jpg",
+    image: anniversaryImg,
   },
   {
     icon: "🎊",
     title: "Party",
     text: "Fun times with friends",
-    image: "/src/assets/occasions/party.jpg",
+    image: partyImg,
   },
 ];
 

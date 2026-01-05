@@ -1,0 +1,148 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for background -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#2d2d2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradient for petals -->
+    <radialGradient id="petalGrad" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffe6f0;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#ffb3d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff80bf;stop-opacity:0.9" />
+    </radialGradient>
+    
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Soft shadow -->
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="200" cy="200" r="198" fill="url(#bgGrad)"/>
+  
+  <!-- Outer decorative ring -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="200" cy="200" r="175" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Main Flower (larger and more detailed) -->
+  <g id="mainFlower" transform="translate(200, 150)" filter="url(#softShadow)">
+    <!-- Outer petals layer -->
+    <g opacity="0.7">
+      <ellipse cx="0" cy="-35" rx="16" ry="28" fill="url(#petalGrad)" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-35" rx="16" ry="28" fill="url(#petalGrad)" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-35" rx="16" ry="28" fill="url(#petalGrad)" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-35" rx="16" ry="28" fill="url(#petalGrad)" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-35" rx="16" ry="28" fill="url(#petalGrad)" transform="rotate(288)"/>
+    </g>
+    
+    <!-- Inner petals layer -->
+    <g>
+      <ellipse cx="0" cy="-28" rx="14" ry="24" fill="url(#petalGrad)" transform="rotate(36)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="24" fill="url(#petalGrad)" transform="rotate(108)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="24" fill="url(#petalGrad)" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="24" fill="url(#petalGrad)" transform="rotate(252)"/>
+      <ellipse cx="0" cy="-28" rx="14" ry="24" fill="url(#petalGrad)" transform="rotate(324)"/>
+    </g>
+    
+    <!-- Center with glow -->
+    <circle cx="0" cy="0" r="12" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="8" fill="#ffd700" opacity="0.8"/>
+    
+    <!-- Decorative center dots -->
+    <circle cx="0" cy="0" r="2.5" fill="#8b4513"/>
+    <circle cx="5" cy="3" r="2" fill="#8b4513" opacity="0.8"/>
+    <circle cx="-5" cy="3" r="2" fill="#8b4513" opacity="0.8"/>
+    <circle cx="3" cy="-4" r="2" fill="#8b4513" opacity="0.8"/>
+    <circle cx="-3" cy="-4" r="2" fill="#8b4513" opacity="0.8"/>
+    <circle cx="5" cy="-3" r="1.5" fill="#8b4513" opacity="0.6"/>
+    <circle cx="-5" cy="-3" r="1.5" fill="#8b4513" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative branches with leaves -->
+  <path d="M 165 155 Q 145 170 135 190 Q 130 200 128 210" stroke="#8b6f47" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <path d="M 235 155 Q 255 170 265 190 Q 270 200 272 210" stroke="#8b6f47" stroke-width="2.5" fill="none" opacity="0.7"/>
+  
+  <!-- Small leaves -->
+  <ellipse cx="140" cy="180" rx="6" ry="12" fill="#6b8e23" opacity="0.6" transform="rotate(-30 140 180)"/>
+  <ellipse cx="260" cy="180" rx="6" ry="12" fill="#6b8e23" opacity="0.6" transform="rotate(30 260 180)"/>
+  
+  <!-- Side accent flowers -->
+  <g transform="translate(135, 135) scale(0.6)" opacity="0.9">
+    <circle cx="0" cy="0" r="5" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <ellipse cx="0" cy="-10" rx="5" ry="8" fill="url(#petalGrad)"/>
+    <ellipse cx="0" cy="10" rx="5" ry="8" fill="url(#petalGrad)"/>
+    <ellipse cx="-10" cy="0" rx="8" ry="5" fill="url(#petalGrad)"/>
+    <ellipse cx="10" cy="0" rx="8" ry="5" fill="url(#petalGrad)"/>
+  </g>
+  
+  <g transform="translate(265, 135) scale(0.6)" opacity="0.9">
+    <circle cx="0" cy="0" r="5" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <ellipse cx="0" cy="-10" rx="5" ry="8" fill="url(#petalGrad)"/>
+    <ellipse cx="0" cy="10" rx="5" ry="8" fill="url(#petalGrad)"/>
+    <ellipse cx="-10" cy="0" rx="8" ry="5" fill="url(#petalGrad)"/>
+    <ellipse cx="10" cy="0" rx="8" ry="5" fill="url(#petalGrad)"/>
+  </g>
+  
+  <!-- Tiny sparkle details -->
+  <circle cx="180" cy="120" r="2" fill="#ffd700" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="220" cy="125" r="2" fill="#ffd700" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="200" cy="110" r="1.5" fill="#ffd700" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Decorative top line -->
+  <line x1="100" y1="220" x2="300" y2="220" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <circle cx="130" cy="220" r="2.5" fill="url(#goldGrad)" opacity="0.7"/>
+  <circle cx="270" cy="220" r="2.5" fill="url(#goldGrad)" opacity="0.7"/>
+  
+  <!-- Main text with glow -->
+  <text x="200" y="255" font-family="'Playfair Display', 'Georgia', serif" font-size="36" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" filter="url(#glow)">
+    The Blossom
+  </text>
+  
+  <text x="200" y="285" font-family="'Montserrat', 'Arial', sans-serif" font-size="22" font-weight="300" fill="#ffffff" text-anchor="middle" letter-spacing="6">
+    STUDIO
+  </text>
+  
+  <!-- Decorative bottom line -->
+  <line x1="110" y1="300" x2="290" y2="300" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+  
+  <!-- Subtitle with elegant font -->
+  <text x="200" y="320" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="13" font-style="italic" fill="#d4af37" text-anchor="middle" opacity="0.9" letter-spacing="1">
+    Restaurant & Private Dining
+  </text>
+  
+  <!-- Bottom decorative flourish -->
+  <path d="M 150 330 Q 175 335 200 333 Q 225 335 250 330" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.5"/>
+  <circle cx="200" cy="333" r="2" fill="url(#goldGrad)" opacity="0.7"/>
+  
+  <!-- Corner decorative elements -->
+  <circle cx="85" cy="85" r="1.5" fill="#ffd700" opacity="0.4"/>
+  <circle cx="315" cy="85" r="1.5" fill="#ffd700" opacity="0.4"/>
+  <circle cx="85" cy="315" r="1.5" fill="#ffd700" opacity="0.4"/>
+  <circle cx="315" cy="315" r="1.5" fill="#ffd700" opacity="0.4"/>
+</svg>
