@@ -53,7 +53,7 @@ Open the terminal and type `npm run dev` then file will be opens in  your web br
 ```
 npm run dev
 ```
-
+Live Previw link : https://pranjalvidyarthi.github.io/The-Blossom-Studio/
 ---
 
 ## Preview :
