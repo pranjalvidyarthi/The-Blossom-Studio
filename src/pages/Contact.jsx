@@ -32,7 +32,7 @@ const Contact = () => {
 
             <ul className="list-unstyled fs-5 text-muted">
               <li className="mb-2">📍 Private Luxury Studio</li>
-              <li className="mb-2">📞 +91 75059 77782</li>
+              <li className="mb-2">📞 +91 75059 </li>
               <li className="mb-2">⏰ Available by Appointment</li>
             </ul>
           </div>
@@ -59,7 +59,7 @@ const Contact = () => {
 *Phone:* ${phone}%0A
 *Message:* ${message}`;
 
-                    const phoneNumber = "917505977782";
+                    const phoneNumber = "91750597";
 
                     window.open(
                       `https://wa.me/${phoneNumber}?text=${text}`,
@@ -100,7 +100,7 @@ const Contact = () => {
 
                     <div className="col-12 text-center">
                       <button
-                        type="submit"
+                        type=""
                         className="btn btn-primary rounded-pill px-5 py-3 fs-5"
                       >
                         💬 Contact via WhatsApp
