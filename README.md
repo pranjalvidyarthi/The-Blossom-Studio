@@ -57,8 +57,8 @@ Live Previw link : https://pranjalvidyarthi.github.io/The-Blossom-Studio/
 ---
 
 ## Preview :
-<img src="preview.png" , alt="Preview 1">
-<img src="preview2.png",alt="Preview 2">
+<img src="preview.png" alt="Preview">
+<img src="preview.png2" alt=" Preview">
 
 ## 🎨 Technologies Used
 
